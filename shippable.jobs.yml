@@ -5,6 +5,7 @@ jobs:
       - IN: sample_node_develop
       - TASK:
         - script: cd ./IN/sample_node_develop/gitRepo/
+        - script: npm install
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
@@ -18,6 +19,7 @@ jobs:
       - IN: build_develop
       - TASK:
         - script: cd ./IN/sample_node_staging/gitRepo/
+        - script: npm install
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
@@ -31,6 +33,7 @@ jobs:
       - IN: build_staging
       - TASK:
         - script: cd ./IN/sample_node_master/gitRepo/
+        - script: npm install
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
