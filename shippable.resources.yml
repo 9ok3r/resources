@@ -11,25 +11,25 @@ resources:
       buildOnCommit: false
       buildOnPullRequest: true
 
-- name: sample_node_staging
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: 9ok3r/sample_node
-      branch: staging
-      branches:
-        only:
-          - staging
-      buildOnCommit: false
-      buildOnPullRequest: true
+  - name: sample_node_staging
+      type: gitRepo
+      integration: github
+      pointer:
+        sourceName: 9ok3r/sample_node
+        branch: staging
+        branches:
+          only:
+            - staging
+        buildOnCommit: false
+        buildOnPullRequest: true
 
-- name: sample_node_develop
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: 9ok3r/sample_node
-      branch: develop
-      branches:
-        only:
-          - develop
+  - name: sample_node_develop
+      type: gitRepo
+      integration: github
+      pointer:
+        sourceName: 9ok3r/sample_node
+        branch: develop
+        branches:
+          only:
+            - develop
 
