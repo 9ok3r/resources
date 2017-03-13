@@ -32,4 +32,5 @@ resources:
       branches:
         only:
           - develop
-
+      buildOnCommit: true
+      buildOnPullRequest: true

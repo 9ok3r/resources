@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: sample_node_develop
       - TASK:
-        - script: ./IN/sample_node_develop/gitRepo/
+        - script: cd ./IN/sample_node_develop/gitRepo/
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
@@ -17,7 +17,7 @@ jobs:
       - IN: sample_node_staging
       - IN: build_develop
       - TASK:
-        - script: ./IN/sample_node_staging/gitRepo/
+        - script: cd ./IN/sample_node_staging/gitRepo/
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
@@ -30,7 +30,7 @@ jobs:
       - IN: sample_node_master
       - IN: build_staging
       - TASK:
-        - script: ./IN/sample_node_master/gitRepo/
+        - script: cd ./IN/sample_node_master/gitRepo/
         - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
