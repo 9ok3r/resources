@@ -10,4 +10,24 @@ jobs:
     on_failure:
       - script: echo 'Failed job .... :('
 
+  - name: build_staging
+    type: runSh
+    steps:
+      - IN: sample_node_staging
+      - TASK:
+        - script: printenv
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
 
+  - name: build_master
+    type: runSh
+    steps:
+      - IN: sample_node_master
+      - TASK:
+        - script: printenv
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
