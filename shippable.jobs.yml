@@ -14,6 +14,7 @@ jobs:
     type: runSh
     steps:
       - IN: sample_node_staging
+      - IN: build_develop
       - TASK:
         - script: printenv
     on_success:
@@ -25,6 +26,7 @@ jobs:
     type: runSh
     steps:
       - IN: sample_node_master
+      - IN: build_staging
       - TASK:
         - script: printenv
     on_success:
