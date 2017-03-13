@@ -1,0 +1,13 @@
+jobs:
+  - name: build_develop
+    type: runSh
+    steps:
+      - IN: sample_node_develop
+      - TASK:
+        - script: printenv
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
+
+
