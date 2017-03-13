@@ -17,6 +17,7 @@ jobs:
     steps:
       - IN: sample_node_staging
       - IN: build_develop
+        switch: off
       - TASK:
         - script: cd ./IN/sample_node_staging/gitRepo/
         - script: npm install
@@ -31,6 +32,7 @@ jobs:
     steps:
       - IN: sample_node_master
       - IN: build_staging
+        switch: off
       - TASK:
         - script: cd ./IN/sample_node_master/gitRepo/
         - script: npm install
