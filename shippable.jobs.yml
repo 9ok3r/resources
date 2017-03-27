@@ -5,8 +5,9 @@ jobs:
       - IN: sample_node_develop
       - TASK:
         - script: cd ./IN/sample_node_develop/gitRepo/
-        - script: npm install
-        - script: grunt
+        - script: ./build.sh
+#        - script: npm install
+#        - script: grunt
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:
